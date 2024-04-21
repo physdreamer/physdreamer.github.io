@@ -8,7 +8,7 @@
 
     <title>PhysDreamer</title>
 
-    <meta name="description" content="">
+    <meta name="description" content="PhysDreamer">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:image" content=""> 
@@ -17,11 +17,11 @@
     <meta property="og:image:height" content="576">
     <meta property="og:type" content="website" />
     <meta property="og:url" content=""/>
-    <meta property="og:title" content="Physics-Based Interaction with 3D Objects via Video Generation" />
-    <meta property="og:description" content="ABs?"/>
+    <meta property="og:title" content="PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation" />
+    <meta property="og:description" content="PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation. Abstract: Realistic object interactions are crucial for creating immersive virtual experiences, yet synthesizing realistic 3D object dynamics in response to novel interactions remains a significant challenge. Unlike unconditional or text-conditioned dynamics generation, action-conditioned dynamics requires perceiving the physical material properties of objects and grounding the 3D motion prediction on these properties, such as object stiffness. However, estimating physical material properties is an open problem due to the lack of material ground-truth data, as measuring these properties for real objects is highly difficult. We present PhysDreamer, a physics-based approach that endows static 3D objects with interactive dynamics by leveraging the object dynamics priors learned by video generation models. By distilling these priors, PhysDreamer enables the synthesis of realistic object responses to novel interactions, such as external forces or agent manipulations. We demonstrate our approach on diverse examples of elastic objects and evaluate the realism of the synthesized interactions through a user study. PhysDreamer takes a step towards more engaging and realistic virtual experiences by enabling static 3D objects to dynamically respond to interactive stimuli in a physically plausible manner."/>
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Physics-Based Interaction with 3D Objects via Video Generation" />
+    <meta name="twitter:title" content="PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation" />
     <meta name="twitter:description" content="Abs2"/>
     <meta name="twitter:image" content="" />
 
@@ -82,7 +82,7 @@
                     </li>
                     <li>
                         <a href="https://kovenyu.com/">
-                            Hong-Xing Yu
+                            Hong-Xing "Koven" Yu
                         </a><sup>2</sup>
                     </li>
                     <li>
@@ -96,6 +96,7 @@
                         </a><sup>1</sup>
                     </li>
                     <wbr>
+                    <br>
                     <li>
                         <a href="https://www.cs.columbia.edu/~cxz/">
                             Changxi Zheng
@@ -133,7 +134,7 @@
         <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2311.18828"
+                <a href="papers/physdreamer_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -142,7 +143,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/a1600012888"
+                <a href="https://github.com/a1600012888/PhysDreamer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -172,6 +173,17 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3> Poking an object in a variety of ways</h3>
+                <video id="co3d-grid" width="100%" autoplay loop muted controls>
+                    <source src="assets/videos/teaser_videos/teaser_video_morph.mp4" type="video/mp4" />
+                </video>
+                <br>
+                <p class="text-justify" style="text-align: center;">PhysDreamer enables realistic 3D interaction with objects.</p>
+            </div>
+        </div>
+        <br>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -187,19 +199,6 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3> PhysDreamer enables realistic 3D interaction with objects</h3><br>
-                <video id="co3d-grid" width="100%" autoplay loop muted controls>
-                    <source src="assets/videos/teaser_videos/carnations_3x4_force3.5.mp4" type="video/mp4" />
-                </video>
-                <br>
-                <p class="text-justify" style="text-align: center;">Drag an object in thousands of ways.</p>
-            </div>
-        </div>
-        <br>
-        <br>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
                 <h3>
 				  <b> <font color="#118ab2">Phys</font><font color="#ef486e">Dreamer</font></b> = <font color="#118ab2">Physics-Based Simulation</font>  + <font color="#ef486e">Video Diffusion Prior</font>
                 </h3>
@@ -207,7 +206,7 @@
                 <image src="assets/figures/figure_teaser.png" width=90% style="display: block; margin: auto;"></image>
                 <br>
                 <p class="text-justify">
-                    (Left) Leveraging and distilling prior knowledge of dynamics from a pre-trained video generation model, we estimate a physical material field for the static 3D object. (Right) The physical material field allows synthesizing interactive 3D dynamics under arbitrary forces. We show rendered sequences from two viewpoints, with red arrows indicating force directions. Please see the supplementary videos for better visualization.
+                    (Left) Leveraging and distilling prior knowledge of dynamics from a pre-trained video generation model, we estimate a physical material field for the static 3D object. (Right) The physical material field allows synthesizing interactive 3D dynamics under arbitrary forces. We show rendered sequences from two viewpoints, with red arrows indicating force directions. 
                 </p>
             </div>
         </div><br><br>
@@ -217,7 +216,9 @@
                 <h3>
 				  Results gallery for interactive motions
                 </h3><br>
-
+                <p class="text-justify">
+                    We present an interactive gallery showcasing our results in synthesizing interactive motions for eight objects. 
+                    The drawn circle and arrow roughly indicate the area and direction of the applied force (the circles are for illustrative purposes only and not drawn precisely). 
                 <!-- <p class="text-justify">
                     
                     We present an interactive gallery showcasing our results in synthesizing interactive motions for eight objects. 
@@ -327,7 +328,7 @@
 
                     Visual comparison between our synthesized videos, real captured footage, and baseline methods (DreamGaussian4D and PhysGaussian). 
                      
-                    Additionally, these videos are the same ones utilized in our user study. See experiment sections in the paper for user-study results. 
+                    Additionally, these videos are the same ones utilized in our user study. Details about the user study is mentioned in the experiment section of the paper. 
 
                 </p>
 
@@ -419,7 +420,7 @@
         <br>
 
             
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Citation
@@ -434,7 +435,23 @@
     year={2024}
 }</textarea>
                 </div>
-            </div>
+            </div> -->
+        
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>Citation</h3>
+                    <div class="form-group">
+                        <textarea id="bibtex" class="form-control" readonly aria-label="BibTeX Citation for Copying" onclick="this.select();" onfocus="this.select();" style="height: 160px;">
+    @article{zhang2024physdreamer,
+        title={{PhysDreamer}: Physics-Based Interaction with 3D Objects via Video Generation},
+        author={Tianyuan Zhang and Hongxing-Yu and Rundi Wu and
+                Brandon Y. Feng and Changxi Zheng and Noah Snavely and Jiajun Wu and William T. Freeman},
+        journal={arxiv},
+        year={2024}
+    }</textarea>
+</div>
+</div>
+</div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -442,7 +459,7 @@
                     Acknowledgements
                 </h3>
                 <p class="text-justify">
-                    We would like to thank Peter Yichen Chen, Pingchuan Ma, Minghao Guo, Ge Yang, and Shai Avidan for insightful discussions. This work is supported by xxx. 
+                    We would like to thank Peter Yichen Chen, Zhengqi Li, Pingchuan Ma, Minghao Guo, Ge Yang, and Shai Avidan for their help and  insightful discussions. This work is in part supported by the NSF PHY-2019786 (The NSF AI Institute for Artificial Intelligence and Fundamental Interactions), RI #2211258, #2338203, ONR MURI N00014-22-1-2740, Quanta Computer, and Samsung
                     <br><br>
                 The website template was borrowed from <a href="https://reconfusion.github.io/">ReconFusion</a>, <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a> and <a href="https://tianweiy.github.io/dmd/">DMD</a>.
                 </p>
